@@ -1,22 +1,44 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
 form {
-  width: 500px;
+  width: 600px;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0;
   gap: 0.5rem;
+
 }
 
 input,
 button {
   padding: 1rem;
 }
+
+ul {
+  list-style: none;
+  display: flex;
+  width: 600px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  gap: .5rem;
+}
+.transactions {
+  width: 250px;
+  border: 1px solid;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
