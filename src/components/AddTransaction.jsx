@@ -20,7 +20,6 @@ const AddTransaction = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    console.log(formData.price == "");
     setFormData({
       price: "",
       date: "",
