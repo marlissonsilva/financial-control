@@ -20,6 +20,16 @@ const AddTransaction = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
+    if (
+      !formData.price ||
+      !formData.purchasedIn ||
+      !formData.description ||
+      !formData.responsible
+    ) {
+      console.log("Nenhum campo preenchido");
+      return;
+    }
+    addDatasInFirebase();
     setFormData({
       price: "",
       date: "",
@@ -79,9 +89,7 @@ const AddTransaction = () => {
           value={formData.responsible}
           onChange={handleChange}
         />
-        <button type="submit" onClick={addDatasInFirebase}>
-          Adicionar
-        </button>
+        <button type="submit">Adicionar</button>
       </form>
     </div>
   );
