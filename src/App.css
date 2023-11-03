@@ -6,7 +6,9 @@
 }
 
 form {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -16,8 +18,9 @@ form {
 input,
 button {
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: none;
+  font-size: 1.1rem;
 }
 button {
   height: 3.5rem;
@@ -26,18 +29,20 @@ button {
 ul {
   list-style: none;
   display: flex;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   flex-wrap: wrap;
-  padding: 0;
+  padding: 0.3rem;
   gap: 0.5rem;
+  justify-content: space-between;
+  max-height: 60vh;
+  overflow-y: auto;
 }
 .transactions {
-  width: 250px;
-  max-width: 300px;
+  width: 260px;
   border: 1px solid;
-  flex-grow: 1;
-  border-radius: .5rem;
-  padding: .5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 .icons {
   display: flex;
@@ -48,6 +53,7 @@ ul {
 
 .fa-solid {
   font-size: 1.2rem;
+  color: black;
 }
 .fa-pen-to-square,
 .fa-trash {
@@ -55,10 +61,10 @@ ul {
   padding: 0.3rem;
   width: 40%;
   cursor: pointer;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
 }
 .fa-pen-to-square {
-  background-color: aliceblue;
+  background-color: rgb(137, 139, 140);
 }
 .fa-trash {
   background-color: rgb(230, 98, 93);
@@ -67,6 +73,12 @@ ul {
 .price {
   font-weight: bold;
   font-size: 1.3rem;
+}
+.span-price {
+  background-color: rgb(248, 127, 127);
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  color: black;
 }
 
 .container-total-prices {
@@ -78,6 +90,10 @@ ul {
   height: 2.8rem;
   border-radius: 0.5rem;
   margin-top: 0.5rem;
+  color: black;
+}
+.container-total-prices span {
+  font-size: 1.2rem;
 }
 .total-prices {
   font-weight: 600;
@@ -94,5 +110,11 @@ ul {
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media screen and (max-width: 642px) {
+  form {
+    width: 95%;
+  }
+  ul {
+    justify-content: center;
+  }
 }
