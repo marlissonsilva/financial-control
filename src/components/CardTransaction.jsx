@@ -29,7 +29,13 @@ const CardTransaction = ({data}) => {
   const {price, purchasedIn, description, responsible, createdAt} = data.data();
   return (
     <li className="transactions">
-      <p>Preço: {price}</p>
+      <p className="price">
+        Preço:{" "}
+        <span className="span-price">
+          {" "}
+          {price.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}
+        </span>
+      </p>
       <p>Comprado em:{purchasedIn} </p>
       <p>Descrição:{description}</p>
       <p>Responsável:{responsible}</p>
