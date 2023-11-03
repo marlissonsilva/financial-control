@@ -36,10 +36,10 @@ const CardTransaction = ({data}) => {
           {price.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}
         </span>
       </p>
-      <p>Comprado em:{purchasedIn} </p>
-      <p>Descrição:{description}</p>
-      <p>Responsável:{responsible}</p>
-      <p>CreatedAt:{dateFormatBr(createdAt)}</p>
+      <p>Comprado em: {purchasedIn} </p>
+      <p>Descrição: {description}</p>
+      <p>Responsável: {responsible}</p>
+      <p>CreatedAt: {dateFormatBr(createdAt)}</p>
       <div className="icons">
         <i className="fa-solid fa-pen-to-square"></i>
         <i
