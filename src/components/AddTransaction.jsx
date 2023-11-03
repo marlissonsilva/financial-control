@@ -69,9 +69,11 @@ const AddTransaction = () => {
           value={formData.price}
           onChange={handleChange}
         />
+        <label htmlFor="date">Data da compra</label>
         <input
           type="date"
           name="purchasedIn"
+          placeholder="Data"
           value={formData.date}
           onChange={handleChange}
         />

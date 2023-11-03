@@ -26,6 +26,9 @@ button {
   height: 3.5rem;
   margin-bottom: 0.5rem;
 }
+label {
+  display: none;
+}
 
 ul {
   list-style: none;
@@ -114,12 +117,14 @@ ul {
   form {
     width: 95%;
   }
-  input[type="date"] {
-    min-width: 95%;
+  label {
+    text-align: left;
+    display: flex;
   }
   ul {
     justify-content: center;
   }
+
   .transactions {
     width: 90%;
   }
